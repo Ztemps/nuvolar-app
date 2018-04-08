@@ -1,0 +1,48 @@
+@import '~sass/variables';
+.user-info {
+    h1 {
+        text-align: center;
+    }
+    background: $light;
+    border: 2px solid $silver;
+    border-radius: 4px;
+    padding: 10px;
+    max-width: 600px;
+    width: calc(100%-50px);
+    margin: 50px auto;
+    .user-info-list {
+        list-style-type: none;
+        padding: 0;
+        .flex-item {
+            display: flex;
+            align-content: center;
+            margin-bottom: 20px;
+            &.wrap {
+                justify-content: space-around;
+                flex-wrap: wrap;
+                .user-stats {
+                    text-align: center;
+                    margin: 20px 30px;
+                    p {
+                        color: $river-blue;
+                        text-decoration: underline;
+                    }
+                }
+                .flex-item-column {
+                    margin: 10px 30px;
+                }
+            }
+            .user-image {
+                flex: 1;
+                img {
+                    border-radius: 50%;
+                    width: 50%;
+                }
+            }
+            .user-bio {
+                flex: 2;
+                align-self: center;
+            }
+        }
+    }
+}

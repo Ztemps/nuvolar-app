@@ -1,0 +1,29 @@
+@import '~sass/variables';
+li {
+    &:hover {
+        opacity: 0.8;
+        background: $darner-tails;
+    }
+    list-style-type: none;
+    border: 3px solid $river-blue;
+    border-radius: 4px;
+    padding: 3%;
+    margin-bottom: 2px;
+    cursor: pointer;
+    .flex-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .user-picture {
+            flex: 2;
+            img {
+                max-width: 45%;
+                border-radius: 50%;
+            }
+        }
+        h6 {
+            flex: 3;
+            font-size: 1em;
+        }
+    }
+}

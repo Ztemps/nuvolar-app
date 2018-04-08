@@ -1,0 +1,8 @@
+<li *ngFor="let user of users | slice:0:9" (click)="onClickUser(user)">
+    <div class="flex-item">
+        <div class="user-picture">
+            <img [src]="user.avatar_url" alt="user avatar">
+        </div>
+        <h6>{{user.login}}</h6>
+    </div>
+</li>

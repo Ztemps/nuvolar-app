@@ -1,0 +1,50 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+.home-wrapper {
+    .home-search {
+        font-family: 'Lato', sans-serif;
+        position: relative;
+        margin-top: 40px;
+        .input-search {
+            &:focus {
+                border: 2px solid $river-blue;
+            }
+            &:focus+.fa {
+                color: $river-blue;
+            }
+            @include input-text;
+            width: 100%;
+            border: 2px solid $silver;
+            border-radius: 4px;
+            margin: 8px 0;
+            outline: none;
+            padding: 8px;
+            box-sizing: border-box;
+            transition: .3s;
+            padding-left: 40px;
+        }
+        .fa {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            padding: 13px 13px;
+            color: $silver;
+            transition: .3s;
+        }
+    }
+    .nuvolar-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 25px;
+        transform: translate(-50%, -50%);
+    }
+    .results {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        .result-list {
+            padding: 0;
+        }
+    }
+}

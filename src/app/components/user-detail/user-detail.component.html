@@ -1,0 +1,46 @@
+<div class="user-info">
+    <h1>{{userName}}</h1>
+    <ul class="user-info-list">
+        <li class="user-info-detail" *ngFor="let user of userInfo">
+            <div class="flex-item">
+                <div class="user-image">
+                    <img [src]="user.avatar_url" alt="avatar">
+                </div>
+                <p class="user-bio">{{user.name}} from {{user.location}}</p>
+            </div>
+            <div class="flex-item">
+                Bio: {{user.bio}}
+            </div>
+            <div class="flex-item wrap">
+                <div class="user-stats">
+                    <p>Following</p>
+                    {{user.following}}
+                </div>
+                <div class="user-stats">
+                    <p>Followers</p>
+                    {{user.followers}}
+                </div>
+                <div class="user-stats">
+                    <p>Public Gists</p>
+                    {{user.public_gists}}
+                </div>
+                <div class="user-stats">
+                    <p>Public Repos</p>
+                    {{user.public_repos}}
+                </div>
+            </div>
+            <br>
+            <h3>Repositories</h3>
+            <div class="flex-item wrap">
+                <div *ngFor="let repo of userRepos">
+                    <div class="flex-item-column">
+                        <a [href]="repo.html_url">{{repo.name}}</a>
+                        <div>Written in {{repo.language}}</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </li>
+    </ul>
+</div>
