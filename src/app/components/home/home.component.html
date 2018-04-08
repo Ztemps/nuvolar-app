@@ -1,7 +1,7 @@
 <div class="home-wrapper">
     <img *ngIf="users.length === 0" class="nuvolar-logo" src="assets/imgs/nuvolar-logo.png" alt="nuvolar logo">
     <div class="home-search">
-        <input type="text" class="input-search" placeholder="Search github mates..." (keyup)="userName$.next($event.target.value)">
+        <input type="text" #searchInput class="input-search" placeholder="Search github mates..." (keyup)="userName$.next($event.target.value)" (keyup)="checkInput(searchInput.value)">
         <i class="fa fa-search" aria-hidden="true"> </i>
     </div>
     <div class="results" *ngIf="users.length > 0">

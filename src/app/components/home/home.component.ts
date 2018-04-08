@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { SearchService } from '../../services/search.service';
 import { Subject } from 'rxjs/Subject';
 import { Router } from '@angular/router';
@@ -11,17 +11,28 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
 })
 export class HomeComponent {
 
+  @ViewChild('searchInput') searchInput: ElementRef;
+
   users: any = [];
   userName$ = new Subject<string>();
 
   constructor(public search: SearchService,
               public router: Router) {
     this.search.debounceSearch(this.userName$)
-      .subscribe( ({items}) => this.users = items);
+      .subscribe( ({items}) => {
+        this.users = items;
+        console.log(items);
+      });
   }
 
   goToUserDetail(user) {
     this.router.navigate(['/user-detail', user.login]);
+  }
+
+  checkInput(value) {
+    if (!value) {
+      this.users = [];
+    }
   }
 
 }

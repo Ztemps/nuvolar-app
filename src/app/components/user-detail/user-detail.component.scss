@@ -28,9 +28,6 @@
                         text-decoration: underline;
                     }
                 }
-                .flex-item-column {
-                    margin: 10px 30px;
-                }
             }
             .user-image {
                 flex: 1;
@@ -42,6 +39,11 @@
             .user-bio {
                 flex: 2;
                 align-self: center;
+            }
+        }
+        .flex-column {
+            .flex-item-column {
+                margin: 10px 0;
             }
         }
     }

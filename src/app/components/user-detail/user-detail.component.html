@@ -31,7 +31,7 @@
             </div>
             <br>
             <h3>Repositories</h3>
-            <div class="flex-item wrap">
+            <div class="flex-column">
                 <div *ngFor="let repo of userRepos">
                     <div class="flex-item-column">
                         <a [href]="repo.html_url">{{repo.name}}</a>
