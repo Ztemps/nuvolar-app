@@ -21,7 +21,6 @@ export class HomeComponent {
     this.search.debounceSearch(this.userName$)
       .subscribe( ({items}) => {
         this.users = items;
-        console.log(items);
       });
   }
 

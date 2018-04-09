@@ -3,5 +3,5 @@
 @import './variables';
 @import './mixins';
 body {
-    background: $pastel;
+    background: url('../assets/imgs/nuvolar-logo.png') no-repeat fixed center;
 }
